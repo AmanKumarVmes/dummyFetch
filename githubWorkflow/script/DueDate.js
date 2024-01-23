@@ -1,5 +1,5 @@
-import fetch from "node-fetch";
-import core from "@actions/core";
+import fetch from "../node_modules/node-fetch";
+import core from "../node_modules/@actions/core";
 
 try {
   // get the accessToken to access the github project
