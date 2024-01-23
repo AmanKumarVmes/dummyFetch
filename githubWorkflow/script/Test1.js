@@ -5,7 +5,8 @@ async function run() {
     try {
         // Your GitHub Actions logic here
         const myInput = await fetch("https://api.github.com/users/AmanKumarVmes")
-        console.log(`Value of myInput: `, myInput);
+        const res = await myInput.json()
+        console.log(`Value of myInput: `, res);
     } catch (error) {
         core.setFailed(error.message);
     }
