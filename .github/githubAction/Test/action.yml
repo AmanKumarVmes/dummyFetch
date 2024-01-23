@@ -1,0 +1,5 @@
+name: "Action for testing purpose"
+description: "Add closing date of an issue in the project"
+runs:
+  using: "node16"
+  main: "../../../githubWorkflow/script/Test.js"

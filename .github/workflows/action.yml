@@ -1,0 +1,23 @@
+name: "Add due date of a task"
+
+on:
+    push:
+        branches:
+          - "main"
+
+jobs:
+  add_due_date:
+    runs-on: ubuntu-latest
+    name: "Job to add due date of task to the project"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
+      - run: npm install
+        working-directory: githubWorkflow
+      - name: Add due date of task to the project
+        id: workflow_request
+        uses: ./.github/githubAction/Test
