@@ -3,7 +3,7 @@ name: "Add due date of a task"
 on:
     push:
         branches:
-          - "main"
+          - "master"
 
 jobs:
   add_due_date:
