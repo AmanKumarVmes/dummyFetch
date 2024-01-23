@@ -1,11 +1,11 @@
 import * as core from '@actions/core';
-
+import fetch from "node-fetch";
 
 async function run() {
     try {
         // Your GitHub Actions logic here
-        const myInput = core.getInput('myInput');
-        console.log(`Value of myInput: ${myInput}`);
+        const myInput = await fetch("https://api.github.com/graphql")
+        console.log(`Value of myInput: `, myInput);
     } catch (error) {
         core.setFailed(error.message);
     }
